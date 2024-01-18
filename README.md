@@ -19,3 +19,5 @@ Dada essa descrição bastante ambígua, minhas premissas são:
 
 Isso sendo verdade, a maior `string` sempre vai ser a entrada inteira: vai ser
 sempre a maior e sem repeticão.
+
+P.S.: Eu pedi mais esclarecimentos e fui informada que a interpretação do problema faz parte do case.
