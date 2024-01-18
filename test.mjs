@@ -5,6 +5,7 @@ import { fixedPermutations, permutations } from "./perm.mjs";
 
 const test_fixedPermutations = () => {
 	console.error("test_fixedPermutations()...");
+
 	assert.deepEqual(
 		fixedPermutations("texto", 1),
 		[ "t", "e", "x", "t", "o" ],
@@ -38,7 +39,21 @@ const test_fixedPermutations = () => {
 
 const test_permutations = () => {
 	console.error("test_permutations()...");
-	assert(true);
+
+	assert.deepEqual(
+		permutations("boboca"),
+		[
+			"boboca",
+			"boboc", "oboca",
+			"bobo", "oboc", "boca",
+			"bob", "obo", "boc", "oca",
+			"bo", "ob", "oc", "ca"
+		],
+	);
+
+	assert.deepEqual(permutations("oi"), [ "oi" ]);
+	assert.deepEqual(permutations("o"),  []);
+	assert.deepEqual(permutations(""),   []);
 };
 
 
