@@ -6,4 +6,13 @@ export const fixedPermutations = (s, n) => {
 	return res;
 };
 
-export const permutations = () => {};
+const removeDuplicates = arr =>
+	Array.from(new Set(arr));
+
+export const permutations = s => {
+	let res = [];
+	for (let i = 2; i <= s.length; i++) {
+		res = res.concat(removeDuplicates(fixedPermutations(s, i)));
+	}
+	return res.sort((a, b) => b.length - a.length);
+};
